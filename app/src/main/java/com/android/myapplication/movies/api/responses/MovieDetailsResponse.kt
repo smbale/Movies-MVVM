@@ -1,4 +1,4 @@
-package com.android.myapplication.popularmovies.api.responses
+package com.android.myapplication.movies.api.responses
 
 
 import com.android.myapplication.popularmovies.api.responses.inner.CreditsResponse

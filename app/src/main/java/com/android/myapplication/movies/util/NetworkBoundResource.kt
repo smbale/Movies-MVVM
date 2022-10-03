@@ -79,14 +79,14 @@ abstract class NetworkBoundResource<CacheObject, RequestObject>
                 }
                 is ApiEmptyResponse -> {
                     appExecutors.mainThreadExecutor.execute {
-                        //get whats availabe in the db
+                        //get whats available in the db
                         result.addSource(loadFromDb()) { oldCachedObject ->
                             setValue(Resource.Success(oldCachedObject))
                         }
                     }
                 }
                 is ApiErrorResponse -> {
-                    //get whats availabe in the db
+                    //get whats available in the db
                     result.addSource(dbSource) { oldCachedObject ->
                         setValue(Resource.Error(response.errorMessage, oldCachedObject))
                     }

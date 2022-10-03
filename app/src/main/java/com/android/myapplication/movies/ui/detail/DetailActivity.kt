@@ -5,10 +5,8 @@ import PAGE_COUNT
 import PAGE_INFO
 import PAGE_REVIEW
 import PAGE_VIDEOS
-import YOUTUBE_BASE_URL
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -18,7 +16,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.android.myapplication.movies.R
 import com.android.myapplication.movies.databinding.ActivityDetailBinding
 import com.android.myapplication.movies.ui.detail.fragments.*
-import com.android.myapplication.movies.util.EventObserver
 import com.android.myapplication.popularmovies.api.model.Movie
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator

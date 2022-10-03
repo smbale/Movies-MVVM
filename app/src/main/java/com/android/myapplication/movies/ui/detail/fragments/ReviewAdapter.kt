@@ -10,7 +10,7 @@ import com.android.myapplication.movies.R
 import com.android.myapplication.movies.databinding.ItemReviewBinding
 import com.android.myapplication.popularmovies.api.model.Review
 
-class ReviewAdapter() :
+class ReviewAdapter :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Review>() {

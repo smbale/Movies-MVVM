@@ -1,12 +1,10 @@
 package com.android.myapplication.movies.api
 
-import android.text.TextUtils
 import androidx.lifecycle.LiveData
 import com.android.myapplication.movies.BuildConfig
 import com.android.myapplication.movies.api.responses.ApiResponse
-import com.android.myapplication.popularmovies.api.responses.MovieDetailsResponse
+import com.android.myapplication.movies.api.responses.MovieDetailsResponse
 import com.android.myapplication.popularmovies.api.responses.MoviesResponse
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

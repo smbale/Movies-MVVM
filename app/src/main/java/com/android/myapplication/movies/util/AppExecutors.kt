@@ -5,7 +5,7 @@ import android.os.Looper
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
-public class AppExecutors {
+class AppExecutors {
     //executor to deal with the DAO
     val diskIO = Executors.newSingleThreadExecutor()
     //executor to put runnable into the main Thread queue from a background thread
