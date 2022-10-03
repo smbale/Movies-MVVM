@@ -1,4 +1,4 @@
-package com.android.myapplication.popularmovies.util
+package com.android.myapplication.movies.util
 
 import androidx.lifecycle.LiveData
 import com.android.myapplication.movies.api.responses.ApiResponse

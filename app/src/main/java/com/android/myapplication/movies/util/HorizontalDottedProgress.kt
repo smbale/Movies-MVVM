@@ -22,8 +22,8 @@ class HorizontalDottedProgress : View {
     //specify how many dots you need in a progressbar
     private val mDotAmount = 10
 
-    constructor(context: Context?) : super(context) {}
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {}
+    constructor(context: Context?) : super(context)
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
         attrs,
@@ -32,16 +32,16 @@ class HorizontalDottedProgress : View {
 
 
     //Method to draw your customized dot on the canvas
-    protected override fun onDraw(canvas: Canvas) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         val paint = Paint()
         //set the color for the dot that you want to draw
-        paint.setColor(getResources().getColor(R.color.holo_orange_dark))
+        paint.color = resources.getColor(R.color.holo_orange_dark)
         //function to create dot
         createDot(canvas, paint)
     }
 
-    protected override fun onAttachedToWindow() {
+    override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         //Animation called when attaching to the window, i.e to your screen
         startAnimation()
@@ -64,7 +64,7 @@ class HorizontalDottedProgress : View {
         }
     }
 
-    protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         val width: Int
         val height: Int

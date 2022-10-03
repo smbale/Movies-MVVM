@@ -52,5 +52,4 @@ data class Movie(
     @ColumnInfo(name = "category")
     val categoryType:Category = Category.POPULAR
 
-):Parcelable{
-}
+):Parcelable

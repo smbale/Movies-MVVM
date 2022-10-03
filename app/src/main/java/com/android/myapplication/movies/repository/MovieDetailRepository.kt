@@ -7,12 +7,9 @@ import com.android.myapplication.movies.api.responses.ApiErrorResponse
 import com.android.myapplication.movies.api.responses.ApiResponse
 import com.android.myapplication.movies.api.responses.ApiSuccessResponse
 import com.android.myapplication.movies.models.MovieDetails
-import com.android.myapplication.movies.util.NetworkBoundResource
 import com.android.myapplication.movies.util.NetworkBoundResourceNoCaching
 import com.android.myapplication.movies.util.Resource
-import com.android.myapplication.popularmovies.api.model.Movie
-import com.android.myapplication.popularmovies.api.responses.MovieDetailsResponse
-import com.android.myapplication.popularmovies.api.responses.MoviesResponse
+import com.android.myapplication.movies.api.responses.MovieDetailsResponse
 
 class MovieDetailRepository(
     private val movieApi: MoviesApi

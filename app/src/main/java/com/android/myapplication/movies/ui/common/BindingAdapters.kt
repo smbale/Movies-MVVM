@@ -17,7 +17,6 @@ import com.android.myapplication.movies.ui.detail.fragments.CastAdapter
 import com.android.myapplication.movies.ui.detail.fragments.ReviewAdapter
 import com.android.myapplication.movies.ui.detail.fragments.TrailerAdapter
 import com.android.myapplication.movies.util.Resource
-import com.android.myapplication.popularmovies.api.model.*
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -61,24 +60,15 @@ fun setVideoImage(imageView: ImageView, videoKey: String?) {
 @BindingAdapter("voteAvg")
 fun setVoteAvg(textView: TextView, voteAvg: Double?) {
     val voteAvgString = voteAvg.toString()
-    val text = voteAvgString + "/10"
-    textView.setText(text)
-}
-
-@BindingAdapter("genre")
-fun setGenre(textView: TextView, genres: List<Genre>?) {
-    val stringBuild = StringBuilder()
-    genres?.forEach { genres ->
-        stringBuild.append("${genres.name}\n")
-    }
-    textView.setText(stringBuild)
+    val text = "$voteAvgString/10"
+    textView.text = text
 }
 
 @BindingAdapter("reviewAdapterList")
 fun RecyclerView.submitReviewList(repoResult: Resource<MovieDetails?>?) {
     val adapter = this.adapter as ReviewAdapter
     repoResult?.let {
-        repoResult.data?.let {
+        repoResult.data?.let { it ->
             val reviews = it.reviews
             reviews?.let {
                 adapter.submitList(it)
@@ -91,7 +81,7 @@ fun RecyclerView.submitReviewList(repoResult: Resource<MovieDetails?>?) {
 fun RecyclerView.submitVideoList(repoResult: Resource<MovieDetails?>?) {
     val adapter = this.adapter as TrailerAdapter
     repoResult?.let {
-        repoResult.data?.let {
+        repoResult.data?.let { it ->
             val trailers = it.trailers
             trailers?.let {
                 adapter.submitList(it)
@@ -104,7 +94,7 @@ fun RecyclerView.submitVideoList(repoResult: Resource<MovieDetails?>?) {
 fun RecyclerView.submitCastList(repoResult: Resource<MovieDetails?>?) {
     val adapter = this.adapter as CastAdapter
     repoResult?.let {
-        repoResult.data?.let {
+        repoResult.data?.let { it ->
             val reviews = it.casts
             reviews?.let {
                 adapter.submitList(it)

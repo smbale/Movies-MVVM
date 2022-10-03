@@ -12,6 +12,7 @@ import com.android.myapplication.popularmovies.api.model.Movie
 class DetailFragmentViewModel(app: Application, private val repository: MovieDetailRepository, val movie: Movie) : AndroidViewModel(app) {
 
 
+    lateinit var getMovieDetails: LiveData<Resource<MovieDetails>>
     private val _movieDetails = MediatorLiveData<Resource<MovieDetails>>()
     val movieDetails: LiveData<Resource<MovieDetails>>
         get() = _movieDetails
