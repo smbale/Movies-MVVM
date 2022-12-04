@@ -6,8 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
-
 android {
+
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.android.myapplication.movies"
@@ -52,6 +52,7 @@ android {
         }
     }
 }
+object
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
